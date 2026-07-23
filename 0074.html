@@ -2,10 +2,37 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://member.hyungji.co.kr/auth/sign-up">
-    <title>형지멤버스 매장 연결</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="refresh" content="1; url=https://member.hyungji.co.kr/auth/sign-up">
+    <title>형지멤버스 간편가입</title>
+    <style>
+        body {
+            margin: 0; padding: 0; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; height: 100vh;
+            background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+        }
+        .container { text-align: center; padding: 20px; }
+
+        /* 로고 이미지 스타일: 가로 길이를 최대 180px로 제한하고 여백 주기 */
+        .brand-logo-img { width: 100%; max-width: 180px; height: auto; margin-bottom: 25px; }
+
+        .message { font-size: 16px; color: #555555; line-height: 1.5; margin-bottom: 30px; }
+        .spinner { width: 40px; height: 40px; border: 3px solid rgba(0, 0, 0, 0.1); border-left-color: #111111; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
 </head>
 <body>
-    <p>카카오 간편가입 페이지로 이동 중입니다...</p>
+    <div class="container">
+        <!-- 텍스트 대신 방금 깃허브에 올린 logo.png 파일을 불러옵니다 -->
+        <img src="./logo.png" alt="형지멤버스 로고" class="brand-logo-img">
+
+        <div class="message">매장 전용 카카오 간편가입 페이지로<br>이동하고 있습니다...</div>
+        <div class="spinner"></div>
+    </div>
+    <script>
+        setTimeout(function() {
+            window.location.replace("https://member.hyungji.co.kr/auth/sign-up");
+        }, 500);
+    </script>
 </body>
 </html>
